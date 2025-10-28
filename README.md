@@ -1,0 +1,1 @@
+# QAMID_Diploma
