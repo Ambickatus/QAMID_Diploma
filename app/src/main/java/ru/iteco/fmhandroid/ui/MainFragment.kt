@@ -105,11 +105,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             editNewsMaterialButton.visibility = View.GONE
 
             expandMaterialButton.setOnClickListener {
+
                 when (allNewsTextView.visibility) {
                     View.GONE -> {
                         allNewsTextView.visibility = View.VISIBLE
+
                         allNewsCardsBlockConstraintLayout.visibility = View.VISIBLE
                         expandMaterialButton.setIconResource(R.drawable.expand_less_24)
+
                     }
 
                     else -> {

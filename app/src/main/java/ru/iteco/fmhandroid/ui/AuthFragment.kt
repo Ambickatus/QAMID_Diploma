@@ -62,6 +62,7 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
 
         binding = FragmentAuthBinding.bind(view)
 
+
         with(binding.containerCustomAppBarIncludeOnFragmentMain) {
             mainMenuImageButton.visibility = View.GONE
             authorizationImageButton.visibility = View.GONE

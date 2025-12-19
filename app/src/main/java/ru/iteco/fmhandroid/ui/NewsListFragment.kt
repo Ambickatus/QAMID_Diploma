@@ -32,15 +32,18 @@ class NewsListFragment : Fragment(R.layout.fragment_news_list) {
     private val authViewModel: AuthViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
 
         lifecycleScope.launchWhenCreated {
             viewModel.onRefresh()
+
         }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentNewsListBinding.bind(view)
         val mainMenu = PopupMenu(
@@ -50,6 +53,7 @@ class NewsListFragment : Fragment(R.layout.fragment_news_list) {
         mainMenu.inflate(R.menu.menu_main)
         val menuItemNews = mainMenu.menu.getItem(2)
         menuItemNews.isEnabled = false
+
 
         mainMenu.setOnMenuItemClickListener {
             when (it.itemId) {
@@ -94,22 +98,28 @@ class NewsListFragment : Fragment(R.layout.fragment_news_list) {
         }
 
         binding.apply {
+
             containerListNewsInclude.allNewsTextView.visibility = View.GONE
             containerListNewsInclude.expandMaterialButton.visibility = View.GONE
+
         }
 
         val adapter = NewsListAdapter(viewModel)
 
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+
             viewModel.data.collectLatest {
                 binding.newsListSwipeRefresh.isRefreshing = false
                 adapter.submitList(it)
                 if (it.isEmpty()) {
+
                     binding.containerListNewsInclude.emptyNewsListGroup.isVisible = true
                     binding.containerListNewsInclude.newsRetryMaterialButton.setOnClickListener {
                         binding.newsListSwipeRefresh.isRefreshing = true
                         viewModel.onRefresh()
+
                         binding.newsListSwipeRefresh.isRefreshing = false
+
                     }
                 }
             }
