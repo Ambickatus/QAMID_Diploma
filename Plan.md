@@ -41,12 +41,12 @@
 - Кнопка Log out выход из учетной записи.
 
 ## Тестовая документация на проекте
-- План по проверке и автоматизации приложения (Plan.md)
-- Чек-лист c отметками о пройденных и не пройденных тестах (Check.xlsx)
-- Тест-кейсы для проверки приложения (Cases.xlsx)
-- Баг-репорты оформленные как (Issues)
-- Allure-отчет с результатами прогона авто тестов запакованный в zip-архив (allure-results.zip)
-- Отчет о тестировании
+- План по проверке и автоматизации приложения [Plan.md](https://github.com/Ambickatus/QAMID_Diploma/blob/main/Plan.md)
+- Чек-лист c отметками о пройденных и не пройденных тестах [Check.xlsx](https://github.com/Ambickatus/QAMID_Diploma/blob/main/Check.xlsx)
+- Тест-кейсы для проверки приложения [Cases.xlsx](https://github.com/Ambickatus/QAMID_Diploma/blob/main/Cases.xlsx)
+- Баг-репорты оформленные как [Issues](https://github.com/Ambickatus/QAMID_Diploma/issues)
+- Allure-отчет с результатами прогона авто тестов запакованный в zip-архив [allure-results.zip](https://github.com/Ambickatus/QAMID_Diploma/blob/main/allure-results.zip)
+- Отчет о тестировании [Result.md](https://github.com/Ambickatus/QAMID_Diploma/blob/main/Result.md)
 
 ## Критерии начала и окончания тестирования
 ### Критерии начала тестирования
