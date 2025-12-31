@@ -12,6 +12,7 @@ import androidx.test.espresso.ViewInteraction;
 import org.junit.runner.RunWith;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 @RunWith(AllureAndroidJUnit4.class)
@@ -24,6 +25,7 @@ public class AboutPage {
     private static final ViewInteraction aboutCompany = onView(withId(R.id.about_company_info_label_text_view));
 
     public void checkVisibilityOfAboutPage() {
+        Allure.step("Проверка видимости страницы при переходе в AboutPage");
         onView(isRoot()).perform(waitId((appVersionId), 10000));
     }
 

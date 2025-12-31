@@ -29,8 +29,10 @@ public class Data {
     public static final String massggeCategory = "Массаж";
     public static final String thanksgivingCategory = "Благодарность";
     public static final String needhelpCategory = "Нужна помощь";
-    public static final String creatingNewsTitle = "Тестовый заголовок №";
-    public static final String creatingNewsDesc = "Тестовое описание №";
+    public static final String creatingNewsTitle = "Testing Title №";
+    public static final String creatingNewsDesc = "Testing description №";
+    public static final String popupErrorMessage = "Fill empty fields";
+    public static final String popupCategoryErrorMessage = "Saving failed. Try again later.";
 
     public static String creatingRandomTitle() {
         Random random = new Random();

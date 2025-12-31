@@ -16,7 +16,7 @@ android {
     defaultConfig {
         testInstrumentationRunner "io.qameta.allure.android.runners.AllureAndroidJUnitRunner"
         applicationId "ru.iteco.fmhandroid"
-        minSdkVersion 21
+        minSdkVersion 26
         targetSdkVersion 31
         versionCode 14
         versionName "1.0.0"

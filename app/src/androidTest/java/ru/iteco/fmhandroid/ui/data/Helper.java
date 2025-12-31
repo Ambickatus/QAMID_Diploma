@@ -3,16 +3,12 @@ package ru.iteco.fmhandroid.ui.data;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-
 import static org.hamcrest.Matchers.allOf;
-
 import static ru.iteco.fmhandroid.ui.data.Data.categories;
 
 import android.content.res.Resources;
 import android.os.SystemClock;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.TextView;
 
 import androidx.annotation.IdRes;
@@ -83,10 +79,6 @@ public class Helper {
 
     public static ViewAction waitId(final int viewId, final long millis) {
         return waitForView(withId(viewId), millis);
-    }
-
-    public static ViewAction waitMatcher(final Matcher<View> matcher, final long millis) {
-        return waitForView(matcher, millis);
     }
 
     public static int getRecyclerViewItemCount(@IdRes int recyclerViewId) {
@@ -164,7 +156,6 @@ public class Helper {
         }
     }
 
-    // Метод получает текст из элемента новостей по заданной позиции.
     public static String getTextFromNews(int fieldId, int position) {
         final String[] itemText = new String[1];
         onView(RecyclerViewMatcher.withRecyclerView(R.id.news_list_recycler_view).atPosition(position))
@@ -178,24 +169,6 @@ public class Helper {
         return itemText[0];
     }
 
-//    public static Matcher<View> childAtPosition(
-//            final Matcher<View> parentMatcher, final int position) {
-//
-//        return new TypeSafeMatcher<View>() {
-//            @Override
-//            public void describeTo(Description description) {
-//                description.appendText("Child at position " + position + " in parent ");
-//                parentMatcher.describeTo(description);
-//            }
-//
-//            @Override
-//            public boolean matchesSafely(View view) {
-//                ViewParent parent = view.getParent();
-//                return parent instanceof ViewGroup && parentMatcher.matches(parent)
-//                        && view.equals(((ViewGroup) parent).getChildAt(position));
-//            }
-//        };
-//    }
     public static String randomCategory() {
         Random random = new Random();
         return categories.get(random.nextInt(categories.size()));
@@ -205,5 +178,6 @@ public class Helper {
         Allure.step("Ждем " + millis / 1000 + " сек");
         SystemClock.sleep(millis);
     }
+
 
 }

@@ -21,7 +21,7 @@ import ru.iteco.fmhandroid.ui.pageObject.OurMissionPage;
 
 public class MainPageTest {
     @Rule
-    public ActivityScenarioRule<AppActivity> mActivityScenarioRule  =
+    public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
             new ActivityScenarioRule<>(AppActivity.class);
 
     AuthorizationPage authorizationPage = new AuthorizationPage();
